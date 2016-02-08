@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sms_settings_layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/custom_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/sms_previous_button"
+            style="@style/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/back_button"
+            android:onClick="onPreviousPressed" />
+
+        <TextView
+            style="@style/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="" />
+
+        <Button
+            android:id="@+id/sms_save_button"
+            style="@style/save_button"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/topbar_button"
+            android:onClick="onSave"
+            android:text="@string/save_text" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/custom_action_bar_sep"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"></View>
+</LinearLayout>

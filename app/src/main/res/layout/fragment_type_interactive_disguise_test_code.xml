@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:windowSoftInputMode="stateVisible">
+
+    <LinearLayout
+        style="@style/wizard_static_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_contents"
+            style="@style/wizard_content_style" />
+
+        <EditText
+            android:id="@+id/create_pin_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:hint="...."
+            android:inputType="number"
+            android:maxLines="1"
+            android:password="true"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/b_action"
+            style="@style/activate_disguise_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/drawable_wizard_button"
+            android:text="@string/page_button_action_text"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>

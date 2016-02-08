@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'witness'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "org.iilab.pb"
+        minSdkVersion 10
+        targetSdkVersion 23
+    }
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:+'
+    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:preference-v7:+'
+    testCompile "org.robolectric:robolectric:+"
+    testCompile "org.robolectric:shadows-support-v4:+"
+    testCompile 'junit:junit:+'
+    testCompile "org.mockito:mockito-core:+"
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true;
+    }
+}

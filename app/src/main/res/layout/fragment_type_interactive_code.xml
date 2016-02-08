@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:windowSoftInputMode="stateVisible">
+
+    <ScrollView
+        android:id="@+id/wizard_start_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            style="@style/wizard_static_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fragment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="5dp"
+                android:text="@string/page_title_text"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/fragment_intro"
+                style="@style/wizard_intro_style"
+                android:layout_below="@+id/fragment_title" />
+
+            <LinearLayout
+                android:id="@+id/ll_fragment_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_intro"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/warning" />
+
+                <TextView
+                    android:id="@+id/fragment_warning"
+                    style="@style/wizard_warning_style" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_contents"
+                style="@style/wizard_content_style"
+                android:layout_below="@+id/ll_fragment_warning" />
+
+            <EditText
+                android:id="@+id/create_pin_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_contents"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:hint="...."
+                android:inputType="number"
+                android:maxLines="1"
+                android:password="true"
+                android:textSize="30sp" />
+
+            <org.iilab.pb.common.MessageTextView
+                android:id="@+id/confirm_pin_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/create_pin_edittext"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                custom:message_header="@string/confirm_pin" />
+
+            <EditText
+                android:id="@+id/confirm_pin_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confirm_pin_header"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:hint="...."
+                android:inputType="number"
+                android:maxLines="1"
+                android:password="true"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/fragment_action"
+                style="@style/activate_disguise_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/confirm_pin_edittext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/drawable_wizard_button"
+                android:text="@string/page_button_action_text" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
