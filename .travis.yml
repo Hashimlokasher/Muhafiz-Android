@@ -10,7 +10,8 @@ env:
     # stalled build after 10 minutes, so this should be shorter than that so
     # there is time for the build to report the error.
     - ADB_INSTALL_TIMEOUT=5
-
+before_install:
+ - chmod +x gradlew
 android:
   components:
     - tools
@@ -18,12 +19,18 @@ android:
     - extra-android-m2repository
     - build-tools-23.0.2
     - android-23
+    - extra-android-support
+    - extra-google-m2repository
+
   licenses:
     # only approve the Android software licenses, they match sources
     # the Google licenses mean proprietary software with binary blobs
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
-
+before_script:
+  - echo yes | android update sdk --no-ui --all --filter platform-tools,tools
+  - echo yes | android update sdk --no-ui --all --filter build-tools-23.0.2
+  - echo yes | android update sdk --no-ui --all --filter android-23
 
 licenses:
     # only approve the Android software licenses, they match sources
