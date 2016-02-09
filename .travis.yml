@@ -38,7 +38,7 @@ licenses:
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     
-sudo: false
+sudo: true
 notifications:
   email: false
 
