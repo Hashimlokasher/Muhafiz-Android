@@ -187,8 +187,7 @@ public class AppUtil {
     public static void updateImages(final boolean downloadImages, final String textHtml, final Context context, final DisplayMetrics metrics, final TextView tvContent, final int imageScaleFlag) {
 
         if (textHtml == null) return;
-        Spanned spanned = Html.fromHtml(textHtml,
-                new Html.ImageGetter() {
+        Spanned spanned = Html.fromHtml(textHtml, new Html.ImageGetter() {
                     @SuppressWarnings("unchecked")
                     @Override
                     public Drawable getDrawable(final String source) {

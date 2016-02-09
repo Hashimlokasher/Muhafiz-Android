@@ -80,7 +80,8 @@
             <TextView
                 android:id="@+id/fragment_contents"
                 style="@style/wizard_content_style"
-                android:layout_below="@+id/ll_fragment_warning" />
+                android:layout_below="@+id/ll_fragment_warning"
+                android:gravity="center" />
 
             <Button
                 android:id="@+id/b_actionStopAlert"

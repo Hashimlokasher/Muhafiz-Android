@@ -83,7 +83,8 @@
     <TextView
         android:id="@+id/fragment_contents"
         style="@style/wizard_content_style"
-        android:layout_below="@+id/lv_checklist" />
+        android:layout_below="@+id/lv_checklist"
+        android:editable="false" />
 
     <LinearLayout
         android:id="@+id/ll_actions"
